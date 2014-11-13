@@ -1,119 +1,121 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>API Design Overview</title>
+    <title>API Design Overview</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/night.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'bower_components/reveal.js/css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'bower_components/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
 
-		<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>API Design</h1>
-					<h3>An intro to the what, why, and how.</h3>
-					<p>
-						<small>Created by <font color="orange">Douglas Mason & Matthew Orres</font></small>
-					</p>
-				</section>
-                
-                <section>
-                    <h1>WHAT & WHY</h1>
-                </section>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>API Design</h1>
+                <h3>An intro to the what, why, and how.</h3>
+                <p>
+                    <small>Created by <font color="orange">Douglas Mason & Matthew Orres</font></small>
+                </p>
+            </section>
 
-                <section>
-                    <h2>Most Popular Design Languages</h2>
-		    <div class="row"> 
-	                   <div class="col-md-4">
-			<p class="text-warning">Swagger</p>
-                      <ul>
-                           <li>JSON</li>
-			   <li>Bottom-up</li>
-			   <li>(Top-down support with 2.0)</li>
-                           <li>Reverb</li>
-                       </ul>
-                   </div>
-	    <div class="col-md-4">
-			<p class="text-warning">API-Blueprint</p>
-                      <ul>
-                           <li>Markdown</li>
-			   <li>Top-down</li>
-                           <li>Apiary</li>
-                       </ul>
-                   </div>
-                   <div class="col-md-4">
-			<p class="text-warning">RAML</p>
-                      <ul>
-                           <li>YAML</li>
-			   <li>Top-down</li>
-                           <li>Mulesoft</li>
-                       </ul>
-                   </div>
-	   </div>
-                </section>
+            <section>
+                <h1>WHAT & WHY</h1>
+            </section>
 
-		<!-- SWAGGER -->
-		<section>
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Swagger</h3>
-					<ul>
-						<li><a href="http://www.swagger.io">swagger.io</a></li>
-						<li>Available Swagger Editor that parses yaml to the swagger json file</li>
-						<li><p>Tools and resources</p>
-							<image src="http://i.imgur.com/UsEwng9.png"></image>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
+            <section>
+                <h2>Most Popular Design Languages</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="text-warning">Swagger</p>
+                        <ul>
+                            <li>JSON</li>
+                            <li>Bottom-up</li>
+                            <li>(Top-down support with 2.0)</li>
+                            <li>Reverb</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-warning">API-Blueprint</p>
+                        <ul>
+                            <li>Markdown</li>
+                            <li>Top-down</li>
+                            <li>Apiary</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-warning">RAML</p>
+                        <ul>
+                            <li>YAML</li>
+                            <li>Top-down</li>
+                            <li>Mulesoft</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SWAGGER -->
+            <section>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Swagger</h3>
+                        <ul>
+                            <li><a href="http://www.swagger.io">swagger.io</a>
+                            </li>
+                            <li>Available Swagger Editor that parses yaml to the swagger json file</li>
+                            <li>
+                                <p>Tools and resources</p>
+                                <image src="http://i.imgur.com/UsEwng9.png"></image>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
 
-		<!-- RAML -->
-		<section>
-			<div class="row">
-				<div class="col-md-4">
-					<h3>RAML</h3>
-				</div>
-			</div>
-		</section>
-		<section>
-			<h3>RAML -> YAML</h3>
-			<pre>
+            <!-- RAML -->
+            <section>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>RAML</h3>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>RAML -> YAML</h3>
+                <pre>
 			<code data-trim>
 #%RAML 0.8
  
@@ -156,21 +158,21 @@ traits:
         This method will *delete* an **individual song**
 			</code>
 			</pre>
-		</section>
+            </section>
 
 
-		<!-- API-Blueprint -->
-		<section>
-			<div class="row">
-				<div class="col-md-4">
-					<h3>API-Blueprint</h3>
-				</div>
-			</div>
-		</section>
-		<section>
-			<h2>API Blueprint</h2>
-			<h3>Markdown</h3>
-			<pre>
+            <!-- API-Blueprint -->
+            <section>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>API-Blueprint</h3>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>API Blueprint</h2>
+                <h3>Markdown</h3>
+                <pre>
 			<code>
 
 # GET /message
@@ -179,10 +181,10 @@ traits:
         Hello World!
 			</code>
 			</pre>
-		</section>
-		<section>
-			<h3>Resulting JSON</h3>
-		<pre>
+            </section>
+            <section>
+                <h3>Resulting JSON</h3>
+                <pre>
 		<code data-trim>
 {
     "_version": "2.0",
@@ -237,67 +239,100 @@ traits:
 		
 		</code>
 		</pre>
-	</section>
+            </section>
 
-	<!-- Project Gemini -->
-		<section>
-			<div class="row">
-				<div class="col-md-12">
-			<h3>Project Gemini Swagger</h3>
-				<ul>
-					<li class="fragment" data-fragment-index="1">Top-down</li>
-					<li class="fragment" data-fragment-index="2">Swagger
-						<br/><image src="http://i.imgur.com/XrxY0df.png"></image>
-			</li>
-				</ul> 
+            <!-- Project Gemini -->
+            <section>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Project Gemini Swagger</h3>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Top-down</li>
+                            <li class="fragment" data-fragment-index="2">Swagger
+                                <br/>
+                                <image src="http://i.imgur.com/XrxY0df.png"></image>
+                            </li>
+                        </ul>
 
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12" class="fragment" data-fragment-index="2">
-				</div>
-			</div>
-		</section>
-				<section>
-					<h1>THE END</h1>
-				</section>
-			</div>
-		</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" class="fragment" data-fragment-index="2">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1>THE END</h1>
+            </section>
+        </div>
+    </div>
 
-		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
-		<script src="bower_components/reveal.js/js/reveal.min.js"></script>
-		<script src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-		<script>
+    <script>
+        // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                {
+                    src: 'bower_components/reveal.js/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'bower_components/reveal.js/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'bower_components/reveal.js/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: 'bower_components/reveal.js/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+    ]
+        });
+    </script>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+</body>
 
-		</script>
-
-	</body>
 </html>
