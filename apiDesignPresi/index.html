@@ -56,34 +56,195 @@
             </section>
 
             <section>
+                <section>
                 <h2>Most Popular Design Languages</h2>
+                    </section>
+                <section data-background="#597d04">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Swagger</h1>
+                            <ul>
+                                <li>JSON</li>
+                                <li>Bottom-up</li>
+                                <li>(Top-down support with 2.0)</li>
+                                <li>Reverb</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section data-background="#352461">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>API-Blueprint</h1>
+                            <ul>
+                                <li>Markdown</li>
+                                <li>Top-down</li>
+                                <li>Apiary</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section data-background="#0b9be6">
+                    <div classs="row">
+                        <div class="col-md-12">
+                            <h1>RAML</h1>
+                            <ul>
+                                <li>YAML</li>
+                                <li>Top-down</li>
+                                <li>Mulesoft</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- RAML -->
+            <section>
                 <div class="row">
-                    <div class="col-md-4">
-                        <p class="text-warning">Swagger</p>
+                    <div class="col-md-12">
+                        <h3>RAML</h3>
                         <ul>
-                            <li>JSON</li>
-                            <li>Bottom-up</li>
-                            <li>(Top-down support with 2.0)</li>
-                            <li>Reverb</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="text-warning">API-Blueprint</p>
-                        <ul>
-                            <li>Markdown</li>
-                            <li>Top-down</li>
-                            <li>Apiary</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="text-warning">RAML</p>
-                        <ul>
-                            <li>YAML</li>
-                            <li>Top-down</li>
-                            <li>Mulesoft</li>
+                            <li><a href="http://www.raml.org">raml.org</a>
+                            </li>
+                            <li>Online RAML editor</li>
+                            <li>Sublime Text</li>
                         </ul>
                     </div>
                 </div>
+            </section>
+            <section>
+                <h3>RAML -> YAML</h3>
+                <pre>
+			<code data-trim>
+#%RAML 0.8
+ 
+title: World Music API
+baseUri: http://example.api.com/{version}
+version: v1
+traits:
+  - paged:
+      queryParameters:
+        pages:
+          description: The number of pages to return
+          type: number
+  - secured: !include http://raml-example.com/secured.yml
+/songs:
+  is: [ paged, secured ]
+  get:
+    queryParameters:
+      genre:
+        description: filter the songs by genre
+  post:
+  /{songId}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A canonical song",
+                  "properties": {
+                    "title":  { "type": "string" },
+                    "artist": { "type": "string" }
+                  },
+                  "required": [ "title", "artist" ]
+                }
+            application/xml:
+    delete:
+      description: |
+        This method will *delete* an **individual song**
+			</code>
+			</pre>
+            </section>
+
+
+            <!-- API-Blueprint -->
+            <section>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>API-Blueprint</h3>
+                        <ul>
+                            <li><a href="http://www.apiblueprint.org">apiblueprint.org</a>
+                            </li>
+                            <li>Online Markdown editor</li>
+                            <li>Sublime Text plugin</li>
+                            <li>Atom editor plugin</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>API Blueprint</h2>
+                <h3>Markdown</h3>
+                <pre>
+			<code>
+
+# GET /message
++ Response 200 (text/plain)
+
+        Hello World!
+			</code>
+			</pre>
+            </section>
+            <section>
+                <h3>Resulting JSON</h3>
+                <pre>
+		<code data-trim>
+{
+    "_version": "2.0",
+    "metadata": [],
+    "name": "",
+    "description": "",
+    "resourceGroups": [
+        {
+            "name": "",
+            "description": "",
+            "resources": [
+                {
+                    "name": "",
+                    "description": "",
+                    "uriTemplate": "/message",
+                    "model": {},
+                    "parameters": [],
+                    "actions": [
+                        {
+                            "name": "",
+                            "description": "",
+                            "method": "GET",
+                            "parameters": [],
+                            "examples": [
+                                {
+                                    "name": "",
+                                    "description": "",
+                                    "requests": [],
+                                    "responses": [
+                                        {
+                                            "name": "200",
+                                            "description": "",
+                                            "headers": [
+                                                {
+                                                    "name": "Content-Type",
+                                                    "value": "text/plain"
+                                                }
+                                            ],
+                                            "body": "Hello World!\n",
+                                            "schema": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+		
+		</code>
+		</pre>
             </section>
 
             <!-- SWAGGER -->
@@ -228,154 +389,7 @@
                 </pre>
             </section>
 
-            <!-- RAML -->
-            <section>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>RAML</h3>
-                        <ul>
-                            <li><a href="http://www.raml.org">raml.org</a>
-                            </li>
-                            <li>Online RAML editor</li>
-                            <li>Sublime Text</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h3>RAML -> YAML</h3>
-                <pre>
-			<code data-trim>
-#%RAML 0.8
- 
-title: World Music API
-baseUri: http://example.api.com/{version}
-version: v1
-traits:
-  - paged:
-      queryParameters:
-        pages:
-          description: The number of pages to return
-          type: number
-  - secured: !include http://raml-example.com/secured.yml
-/songs:
-  is: [ paged, secured ]
-  get:
-    queryParameters:
-      genre:
-        description: filter the songs by genre
-  post:
-  /{songId}:
-    get:
-      responses:
-        200:
-          body:
-            application/json:
-              schema: |
-                { "$schema": "http://json-schema.org/schema",
-                  "type": "object",
-                  "description": "A canonical song",
-                  "properties": {
-                    "title":  { "type": "string" },
-                    "artist": { "type": "string" }
-                  },
-                  "required": [ "title", "artist" ]
-                }
-            application/xml:
-    delete:
-      description: |
-        This method will *delete* an **individual song**
-			</code>
-			</pre>
-            </section>
 
-
-            <!-- API-Blueprint -->
-            <section>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>API-Blueprint</h3>
-                        <ul>
-                            <li><a href="http://www.apiblueprint.org">apiblueprint.org</a>
-                            </li>
-                            <li>Online RAML editor</li>
-                            <li>Sublime Text plugin</li>
-                            <li>Atom editor plugin</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2>API Blueprint</h2>
-                <h3>Markdown</h3>
-                <pre>
-			<code>
-
-# GET /message
-+ Response 200 (text/plain)
-
-        Hello World!
-			</code>
-			</pre>
-            </section>
-            <section>
-                <h3>Resulting JSON</h3>
-                <pre>
-		<code data-trim>
-{
-    "_version": "2.0",
-    "metadata": [],
-    "name": "",
-    "description": "",
-    "resourceGroups": [
-        {
-            "name": "",
-            "description": "",
-            "resources": [
-                {
-                    "name": "",
-                    "description": "",
-                    "uriTemplate": "/message",
-                    "model": {},
-                    "parameters": [],
-                    "actions": [
-                        {
-                            "name": "",
-                            "description": "",
-                            "method": "GET",
-                            "parameters": [],
-                            "examples": [
-                                {
-                                    "name": "",
-                                    "description": "",
-                                    "requests": [],
-                                    "responses": [
-                                        {
-                                            "name": "200",
-                                            "description": "",
-                                            "headers": [
-                                                {
-                                                    "name": "Content-Type",
-                                                    "value": "text/plain"
-                                                }
-                                            ],
-                                            "body": "Hello World!\n",
-                                            "schema": ""
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-		
-		</code>
-		</pre>
-            </section>
 
             <!-- Project Gemini -->
             <section>
@@ -399,7 +413,8 @@ traits:
             </section>
             <section>
                 <h1>THE END</h1>
-                <h3>Slides at</h3><h3>coderush-apidesign.herokuapp.com</h3>
+                <h3>Slides at</h3>
+                <h3>coderush-apidesign.herokuapp.com</h3>
             </section>
         </div>
     </div>
